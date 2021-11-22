@@ -1,5 +1,8 @@
-﻿namespace ProcAccess.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ProcAccess.Models
 {
+    [Table("tbProcesso")]
     public class Processo
     {
         public int ProcessoId { get; set; }
