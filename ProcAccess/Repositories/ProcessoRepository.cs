@@ -14,7 +14,7 @@ namespace ProcAccess.Repositories
 
         public Processo GetProcessoById(int processoById)
         {
-            //_context.Processos.FirstOrDefault(x => x.ProcessoId == processoById);
+            return _context.Processos.FirstOrDefault(x => x.ProcessoId == processoById);
         }
     }
 }
