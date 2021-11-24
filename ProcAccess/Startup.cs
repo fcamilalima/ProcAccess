@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
 using ProcAccess.Context;
+using ProcAccess.Repositories;
 
 namespace ProcAccess;
 
@@ -20,6 +21,8 @@ public class Startup
         services.AddDbContext<AppDbContext>(options =>
           options.UseSqlServer(Configuration.
           GetConnectionString("DefaultConnection")));
+        services.AddTransient<ICategoriaRepository, CategoriaRepository>();
+        services.AddTransient<IProcessoRepository, ProcessoRepository>();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
